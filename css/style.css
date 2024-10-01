@@ -1,9 +1,57 @@
-
 .nav-spacing .nav-item {
     margin: 0 60px; 
 }
 
-.nav-spacing .nav-item .nav-link:hover {
-    color: #4a62b5;
-    transition: color 0.3s ease;
+.nav-spacing .nav-link {
+    padding: 10px 20px; 
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff6b6b;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+.nav-link:hover {
+    animation: pulse 1s infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn {
+    padding: 10px 20px; 
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px #999;
+}
+
+.btn:hover {
+    border-color: #ff6b6b;
+    animation: pulse 1s infinite;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
