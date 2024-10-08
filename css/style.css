@@ -1,6 +1,6 @@
 .hero-section {
     height: 100vh; 
-    background-image: url('/images/pexels-souvenirpixels-417074.jpg'); 
+    background-image: url('../images/pexels-souvenirpixels-417074.jpg'); 
     background-size: cover;
     background-position: center;
     color: #fff;
